@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 62%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --theme-bg-color: #e9edf0;
+  --red-color: #e61238;
+  --Inter-Black-fonts: "Inter-Black";
+  --Inter-Bold-fonts: "Inter-Bold";
+  --Inter-ExtraBold: "Inter-ExtraBold";
+  --Inter-ExtraLight-fonts: "Inter-ExtraLight";
+  --Inter-Light-fonts: "Inter-Light";
+  --Inter-Medium-fonts: "Inter-Medium";
+  --Inter-Regular-fonts: "Inter-Regular";
+  --Inter-SemiBold-fonts: "Inter-SemiBold";
+  --Inter-Thin-fonts: "Inter-Thin";
+}
+
+@font-face {
+  font-family: "Inter-Black";
+  src: url(../font-family/Inter-fonts/static/Inter-Black.ttf);
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url(../font-family/Inter-fonts/static/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: "Inter-ExtraBold";
+  src: url(../font-family/Inter-fonts/static/Inter-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Inter-ExtraLight";
+  src: url(../font-family/Inter-fonts/static/Inter-ExtraLight.ttf);
+}
+@font-face {
+  font-family: "Inter-Light";
+  src: url(../font-family/Inter-fonts/static/Inter-Light.ttf);
+}
+@font-face {
+  font-family: "Inter-Medium";
+  src: url(../font-family/Inter-fonts/static/Inter-Medium.ttf);
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url(../font-family/Inter-fonts/static/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url(../font-family/Inter-fonts/static/Inter-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Inter-Thin";
+  src: url(../font-family/Inter-fonts/static/Inter-Thin.ttf);
+}
+
+/* header start */
+
+#header {
+  background-color: white;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 1px 5.7px 0 #0000005c;
+  position: relative;
+}
+
+.logo {
+  background-color: white;
+  max-width: 420px;
+  width: 22vw;
+}
+
+/* header end */
+
+/* form css start */
+
+.form-section {
+  padding: 50px 0;
+  background-color: var(--theme-bg-color);
+  min-height: calc(100vh - 94px);
+}
+
+.form-step-area {
+  text-align: center;
+  text-align: -webkit-center;
+}
+
+.form-title {
+  font-size: 6rem;
+  font-family: var(--Inter-Bold-fonts);
+  color: var(--red-color);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.bg-left-img {
+  position: absolute;
+  bottom: 0;
+  max-width: 380px;
+  width: 20vw;
+  left: 0;
+}
+.form-md-title {
+  font-size: 3.4rem;
+  font-family: var(--Inter-Medium-fonts);
+  color: black;
+  line-height: 1.2;
+  text-align: center;
+}
+.form-sm-title {
+  font-size: 2.6rem;
+  font-family: var(--Inter-Medium-fonts);
+  color: black;
+}
+.input-radio-area {
+  max-width: 210px;
+  width: 100%;
+}
+.form-label-order {
+  font-size: 2rem;
+  font-family: var(--Inter-Medium-fonts);
+  color: black;
+  padding: 14px 10px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 #00000045;
+  height: 50px;
+}
+.input-form-radio:checked + .form-label-order {
+  background-color: var(--red-color);
+  color: white;
+}
+.flex-input-area {
+  margin-bottom: 50px;
+}
+.input-area {
+  max-width: 436px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.form-label {
+  font-size: 2rem;
+  color: black;
+  font-family: var(--Inter-Regular-fonts);
+  padding: 14px 22px;
+  height: 50px;
+  border-radius: 5px;
+  background: rgb(238, 240, 245);
+  background: linear-gradient(
+  183deg,
+  rgba(238, 240, 245, 1) 0%,
+  rgba(230, 233, 239, 1) 100%
+);
+  margin: 0;
+  box-shadow: -12px -12px 20px 0 #ffffffcc, 10px 10px 20px 0 #a6b4c8c9;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+.radio-circle {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: relative;
+  background-color: transparent;
+  box-shadow: inset -4px -4px 9px 0 #ffffff, inset 4px 4px 5px 0 #a6b4c894;
+}
+.radio-circle::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  background: rgb(238, 240, 245);
+  background: linear-gradient(195deg, rgba(238, 240, 245, 1) 0%, rgba(230, 233, 239, 1) 100%);
+}
+.order-imput:checked + .form-label .radio-circle::before {
+  background: var(--red-color);
+}
+.form-btn {
+  font-size: 2rem;
+  font-family: var(--Inter-Medium-fonts);
+  color: white;
+  background-color: var(--red-color);
+  max-width: 400px;
+  width: 100%;
+  height: 50px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 2px 0 #00000070;
+}
+.form-para {
+  font-size: 1.4rem;
+  font-family: var(--Inter-Regular-fonts);
+  color: black;
+  line-height: 1.3;
+}
+/* form css end */
