@@ -24,8 +24,10 @@
         </div>
     </header>
 
+
     <main>
         <section class="form-section">
+            <div id="progress-bar"></div>
             <img class="bg-left-img" src="./assets/images/logo-bg-img.png" alt="">
             <form action="">
                 <div class="container">
@@ -71,7 +73,7 @@
                                         Teen Case (12-17 years of age*)
                                     </label>
                                 </div>
-                                <button type="button" class="form-btn next-step mt-4">Continue</button>
+                                <button type="button" disabled class="form-btn next-step mt-4">Continue</button>
                                 <p class="form-para mt-5">* You must be the legal guardian if placing an order for a minor. Existing patients may purchase add-ons such as Ivermectin independently. New patients must purchase a Jase Case to qualify for purchasing add-ons</p>
                             </div>
                         </div>
