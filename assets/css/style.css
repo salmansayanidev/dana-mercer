@@ -59,6 +59,22 @@ input[type="number"] {
 .padd-x15px {
   padding: 0 15px;
 }
+.width-60px {
+  width: 60px !important;
+}
+.px-65px {
+  padding: 0 65px;
+}
+.upper-case {
+  text-transform: uppercase;
+}
+.lh-13 {
+  line-height: 1.3 !important;
+}
+.family-regular {
+  font-family: var(--Inter-Regular-fonts) !important;
+}
+
 
 @font-face {
   font-family: "Inter-Black";
@@ -119,12 +135,12 @@ input[type="number"] {
 /* form css start */
 
 #progress-bar {
-  width: 84px;
   background-color: var(--red-color);
   height: 12px;
   position: absolute;
   left: 0;
   top: 0;
+  transition: 0.3s;
 }
 
 .form-section {
@@ -134,11 +150,19 @@ input[type="number"] {
   position: relative;
 }
 
-
-
 .form-step-area {
   text-align: center;
   text-align: -webkit-center;
+}
+
+.step-pre-btn {
+  position: absolute;
+  font-size: 2rem;
+  color: black;
+  background-color: transparent;
+  border: none;
+  top: 30px;
+  left: 30px;
 }
 
 .form-title {
@@ -280,7 +304,6 @@ input[type="number"] {
   font-family: var(--Inter-Medium-fonts);
   color: var(--red-color);
   line-height: 1.2;
-  text-transform: uppercase;
 }
 .mx-width-436 {
   max-width: 436px;
@@ -317,7 +340,7 @@ input[type="number"] {
   position: relative;
   z-index: 1;
 }
-.select2-results__option.select2-results__option--selectable {
+.select2-results__option {
   font-size: 2rem;
   font-family: var(--Inter-Medium-fonts);
   color: black;
@@ -451,7 +474,6 @@ input[type="number"] {
   padding: 40px 40px;
   background-color: white;
   border-radius: 15px;
-  margin: 0 65px;
   box-shadow: 0 4px 4px 0 #00000045;
 }
 .promotion-code-area {
@@ -524,11 +546,13 @@ input[type="number"] {
   color: black;
   margin-bottom: 10px;
 }
-ul.condition-treated-list {
+ul.condition-treated-list ,
+.agreement-list {
   list-style: disc;
   padding-left: 20px;
 }
-ul.condition-treated-list li::marker {
+ul.condition-treated-list li::marker , 
+ul.agreement-list li::marker {
   font-size: 1.8rem;
 }
 .medication-detail-left {
@@ -596,7 +620,8 @@ ul.condition-treated-list li::marker {
 .form-input-area {
   margin-bottom: 30px;
 }
-.date-of-birth .fa-chevron-down {
+.date-of-birth .fa-chevron-down,
+.select-angle-icon {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -614,7 +639,8 @@ ul.condition-treated-list li::marker {
 .date-of-birth {
   width: 31%;
 }
-.verify-code-popup-wrap {
+.verify-code-popup-wrap,
+.shipping-address-popup-wrap {
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -629,13 +655,21 @@ ul.condition-treated-list li::marker {
   visibility: hidden;
   z-index: 9999;
 }
+.shipping-address-popup-wrap.active {
+  visibility: visible;
+}
+.shipping-address-popup-wrap.active .shipping-address-popup {
+  transform: scale(1);
+}
 .verify-code-popup-wrap.active {
   visibility: visible;
 }
+
 .verify-code-popup-wrap.active .verify-code-popup {
   transform: scale(1);
 }
-.verify-code-popup {
+.verify-code-popup,
+.shipping-address-popup {
   max-width: 590px;
   width: 100%;
   border-radius: 15px;
@@ -644,6 +678,10 @@ ul.condition-treated-list li::marker {
   overflow: hidden;
   transform: scale(0);
   transition: 0.5s;
+}
+.shipping-address-popup {
+  max-height: 89vh;
+  overflow: auto;
 }
 .popup-title {
   font-size: 1.8rem;
@@ -671,5 +709,51 @@ ul.condition-treated-list li::marker {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+}
+.shipping-input-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 0;
+}
+.shipping-input-area .form-input-area {
+  width: 49%;
+}
+textarea.form-input {
+  height: 120px;
+  resize: none;
+} 
+.identity-verify-option-area {
+  background-color: white;
+  padding: 40px 40px;
+  box-shadow: 0 4px 4px 0 #0000004a;
+}
+.verify-option-area {
+  max-width: 480px;
+  width: 100%;
+  border: 1px solid black;
+  padding: 20px 30px;
+}
+.verification-select {
+  font-size: 2rem;
+  font-family: var(--Inter-Medium-fonts);
+  color: black;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  padding: 6px 10px;
+  border-radius: 0;
+  width: 100%;
+  outline: none;
+}
+.verification-select::placeholder {
+  color: black;
+}
+.verification-select.form-select:focus {
+  border-color: black;
+  outline: 0;
+  box-shadow: none;
 }
 /* form css end */
