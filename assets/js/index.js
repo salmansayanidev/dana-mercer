@@ -70,3 +70,38 @@ $(".verify-popup-opn").click(function () {
 $(".shipping-popup-btn").click(function () {
   $(".shipping-address-popup-wrap").toggleClass("active");
 });
+
+
+
+const error = document.querySelector('.error');
+
+document.addEventListener('DOMContentLoaded', function() {
+const verifyButton = document.querySelector('.birth-select');
+verifyButton.addEventListener('click', function() {
+    const birthMonth = document.getElementById('birth-month-dropdown').value;
+    const birthDay = document.getElementById('birth-day-dropdown').value;
+    const birthYear = document.getElementById('birth-year-dropdown').value;
+
+    const selectedDate = new Date(`${birthMonth}/${birthDay}/${birthYear}`);
+
+    const today = new Date();
+    let age = today.getFullYear() - selectedDate.getFullYear();
+    const monthDiff = today.getMonth() - selectedDate.getMonth();
+
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < selectedDate.getDate())) {
+        age--;
+    }
+
+    // Check if age is less than 18
+    if (age < 18) {
+        $(".error").css("display","block");
+        $(".verify-code-popup-wrap").removeClass("active");
+
+        // You can also add additional handling here, like preventing form submission
+    } else {
+        $(".error").css("display","none");
+        $(".verify-code-popup-wrap").addClass("active");
+        // Proceed with your further logic here
+    }
+});
+});
