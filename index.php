@@ -11,9 +11,9 @@ include "header.php"
                 <div class="row justify-content-center">
                     <div class="col-12">
 
-                        <div id="step-1" class="form-step-area step step-1 ">
+                        <div id="step-1" class="form-step-area step step-1 active">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-10 col-lg-6">
+                                <div class="col-12 col-md-10 col-lg-8 col-xxl-6 col-xl-7">
                                     <h1 class="form-title">Welcome</h1>
                                     <h2 class="form-md-title mt-4 mb-5">Let’s start building your Case</h2>
                                     <h3 class="form-sm-title mb-5">Who is this order for?</h3>
@@ -61,11 +61,11 @@ include "header.php"
 
                         <div id="step-2" class="form-step-area step step-2 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 col-lg-4 padd-x15px">
+                                <div class="col-12 col-md-6 col-lg-6 col-xxl-4 col-xl-5 padd-x15px">
                                     <h2 class="form-sb-title text-start">Country Selection</h2>
                                     <h3 class="form-sm-title text-start mt-4 mb-5">Which country are you located?</h3>
                                     <div class="select-to-area mb-4">
-                                        <select class="js-example-basic-single step-form-select d-none" name="state">
+                                        <select data-id="select-country" class="js-example-basic-single country-input step-form-select d-none" name="state">
                                             <option selected disabled>Country</option>
                                             <option value="United-State">United State</option>
                                             <option value="Canada">Canada</option>
@@ -82,7 +82,7 @@ include "header.php"
 
                         <div id="step-3" class="form-step-area step step-3 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 col-lg-4 padd-x15px">
+                                <div class="col-12 col-md-6 col-lg-6 col-xxl-4 col-xl-5 padd-x15px">
                                     <h2 class="form-sb-title text-start">Personal INFO</h2>
                                     <h3 class="form-sm-title text-start mt-4 mb-5">What is your biological sex?</h3>
                                     <div class="input-area">
@@ -109,92 +109,108 @@ include "header.php"
 
                         <div id="step-4" class="form-step-area step step-4 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-10 col-lg-8 padd-x25px">
-                                    <h2 class="form-sb-title text-start">Allergies</h2>
-                                    <h3 class="form-sm-title text-start mt-3 mb-5">Please Indicate if you have allergies to any of the Medications Listed:</h3>
-                                    <div class="flex-checkbox">
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Cephalosporins" value="Cephalosporins" name="Allergies" id="Cephalosporins">
-                                            <label class="form-label" for="Cephalosporins">
-                                                <span class="checkbox-square"></span>
-                                                Cephalosporins (Keflex/cephalexin, etc.)
-                                            </label>
+                                <div class="col-12 col-md-12 col-lg-10 col-xxl-8 col-xl-9 padd-x25px">
+                                    <div class="allery-checkbox-area">
+                                        <h2 class="form-sb-title text-start">Allergies</h2>
+                                        <h3 class="form-sm-title text-start mt-3 mb-5">Please Indicate if you have allergies to any of the Medications Listed:</h3>
+                                        <div class="flex-checkbox">
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Cephalosporins" value="Cephalosporins" name="Allergies" id="Cephalosporins">
+                                                <label class="form-label" for="Cephalosporins">
+                                                    <span class="checkbox-square"></span>
+                                                    Cephalosporins (Keflex/cephalexin, etc.)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Penicillin" value="Penicillin" name="Allergies" id="Penicillin">
+                                                <label class="form-label" for="Penicillin">
+                                                    <span class="checkbox-square"></span>
+                                                    Penicillin's (Amoxicillin, etc.)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Fluoroquinolones" value="Fluoroquinolones" name="Allergies" id="Fluoroquinolones">
+                                                <label class="form-label" for="Fluoroquinolones">
+                                                    <span class="checkbox-square"></span>
+                                                    Fluoroquinolones (Ciprofloxacin, etc.)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Macrolides" value="Macrolides" name="Allergies" id="Macrolides">
+                                                <label class="form-label" for="Macrolides">
+                                                    <span class="checkbox-square"></span>
+                                                    Macrolides (Azithromycin, etc.)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Metronidazole" value="Metronidazole" name="Allergies" id="Metronidazole">
+                                                <label class="form-label" for="Metronidazole">
+                                                    <span class="checkbox-square"></span>
+                                                    Metronidazole
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Sulfonamides" value="Sulfonamides" name="Allergies" id="Sulfonamides">
+                                                <label class="form-label" for="Sulfonamides">
+                                                    <span class="checkbox-square"></span>
+                                                    Sulfonamides (Sulfa, Bactrim)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Tetracyclines" value="Tetracyclines" name="Allergies" id="Tetracyclines">
+                                                <label class="form-label" for="Tetracyclines">
+                                                    <span class="checkbox-square"></span>
+                                                    Tetracyclines (Doxycycline, etc.)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Clindamycin" value="Clindamycin" name="Allergies" id="Clindamycin">
+                                                <label class="form-label" for="Clindamycin">
+                                                    <span class="checkbox-square"></span>
+                                                    Clindamycin
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Other" value="Other" name="Allergies" id="Other">
+                                                <label class="form-label" for="Other">
+                                                    <span class="checkbox-square"></span>
+                                                    Other
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="None-of-the-above" value="None-of-the-above" name="Allergies" id="None-of-the-above">
+                                                <label class="form-label" for="None-of-the-above">
+                                                    <span class="checkbox-square"></span>
+                                                    None of the above
+                                                </label>
+                                            </div>
                                         </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Penicillin"  value="Penicillin" name="Allergies" id="Penicillin">
-                                            <label class="form-label" for="Penicillin">
-                                                <span class="checkbox-square"></span>
-                                                Penicillin's (Amoxicillin, etc.)
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Fluoroquinolones" value="Fluoroquinolones" name="Allergies" id="Fluoroquinolones">
-                                            <label class="form-label" for="Fluoroquinolones">
-                                                <span class="checkbox-square"></span>
-                                                Fluoroquinolones (Ciprofloxacin, etc.)
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Macrolides" value="Macrolides" name="Allergies" id="Macrolides">
-                                            <label class="form-label" for="Macrolides">
-                                                <span class="checkbox-square"></span>
-                                                Macrolides (Azithromycin, etc.)
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Metronidazole" value="Metronidazole" name="Allergies" id="Metronidazole">
-                                            <label class="form-label" for="Metronidazole">
-                                                <span class="checkbox-square"></span>
-                                                Metronidazole
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Sulfonamides" value="Sulfonamides" name="Allergies" id="Sulfonamides">
-                                            <label class="form-label" for="Sulfonamides">
-                                                <span class="checkbox-square"></span>
-                                                Sulfonamides (Sulfa, Bactrim)
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Tetracyclines" value="Tetracyclines" name="Allergies" id="Tetracyclines">
-                                            <label class="form-label" for="Tetracyclines">
-                                                <span class="checkbox-square"></span>
-                                                Tetracyclines (Doxycycline, etc.)
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Clindamycin" value="Clindamycin" name="Allergies" id="Clindamycin">
-                                            <label class="form-label" for="Clindamycin">
-                                                <span class="checkbox-square"></span>
-                                                Clindamycin
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Other" value="Other" name="Allergies" id="Other">
-                                            <label class="form-label" for="Other">
-                                                <span class="checkbox-square"></span>
-                                                Other
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="None-of-the-above" value="None-of-the-above" name="Allergies" id="None-of-the-above">
-                                            <label class="form-label" for="None-of-the-above">
-                                                <span class="checkbox-square"></span>
-                                                None of the above
-                                            </label>
+                                        <button type="button" class="form-btn next-step allergy-step-btn validate-btn">Continue</button>
+                                        <button type="button" class="form-btn allergy-text-btn">Continue</button>
+                                        <button type="button" class="step-pre-btn">
+                                            <i class="fa-solid fa-arrow-left-long"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-8 col-md-10 col-xxl-6 col-xl-7 ">
+                                    <div class="allergy-text-area">
+                                        <h2 class="form-sm-title text-start">ALLERGIES</h2>
+                                        <p class="form-para mb-4">Write the name of the medication and type of reaction experienced. For example: I get hives when taking penicillin. I experience swelling and difficulty breathing when taking ciprofloxacin.</p>
+                                        <p class="form-para mb-4">After completing the encounter a JASE physician may reach out to get more information and determine whether or not a prescription for an emergency supply of antibiotics is appropriate for you.</p>
+                                        <h3 class="form-sm-title fnts-22px text-start mb-4">Indicate allergies to the medications listed previously.</h3>
+                                        <textarea class="form-input w-100 mx-w100 mb-3 allergy-text-input" data-id="allergy-text" name="" id=""></textarea>
+                                        <div class="d-flex justify-content-center align-items-center gap-4 mt-4">
+                                            <button type="button" class="form-btn allergy-text-area-cancel bg-white text-black">Cancel</button>
+                                            <button type="button" class="form-btn next-step allergy-text-area-continue validate-btn">Continue</button>
                                         </div>
                                     </div>
-                                    <button type="button" class="form-btn next-step validate-btn">Continue</button>
-                                    <button type="button" class="step-pre-btn">
-                                        <i class="fa-solid fa-arrow-left-long"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
 
                         <div id="step-5" class="form-step-area step step-5 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-10 col-lg-8 px-65px">
+                                <div class="col-12 col-md-12 col-lg-10 col-xxl-8 col-xl-9 px-65px">
                                     <div class="loader-area d-none">
                                         <h3 class="form-sm-title text-start mb-5">Please Indicate if you have allergies to any of the Medications Listed:</h3>
                                         <div class="spinner-border" role="status">
@@ -370,7 +386,7 @@ include "header.php"
                                                 <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-1.png" alt="">
                                             </div>
                                             <div class="emergency-medication-detail">
-                                                <div class="d-flex mb-4 justify-content-between align-items-center">
+                                                <div class="mb-4 medication-title-area">
                                                     <h3 class="medicine-title text-start">Doxycycline 100 mg</h3>
                                                     <span class="medicine-qty"><strong class="medicine-peice">$20.00</strong></span>
                                                 </div>
@@ -406,7 +422,7 @@ include "header.php"
                                                 <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-2.png" alt="">
                                             </div>
                                             <div class="emergency-medication-detail">
-                                                <div class="d-flex mb-4 justify-content-between align-items-center">
+                                                <div class="mb-4 medication-title-area">
                                                     <h3 class="medicine-title text-start">Amoxicillin-Clavulanate 875-125 mg</h3>
                                                     <span class="medicine-qty"><strong class="medicine-peice">$50.00</strong></span>
                                                 </div>
@@ -442,7 +458,7 @@ include "header.php"
                                                 <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-2.png" alt="">
                                             </div>
                                             <div class="emergency-medication-detail">
-                                                <div class="d-flex mb-4 justify-content-between align-items-center">
+                                                <div class=" mb-4 medication-title-area">
                                                     <h3 class="medicine-title text-start">Ciprofloxacin 500 mg</h3>
                                                     <span class="medicine-qty"><strong class="medicine-peice">$20.00</strong></span>
                                                 </div>
@@ -478,7 +494,7 @@ include "header.php"
                                                 <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-1.png" alt="">
                                             </div>
                                             <div class="emergency-medication-detail">
-                                                <div class="d-flex mb-4 justify-content-between align-items-center">
+                                                <div class="mb-4 medication-title-area">
                                                     <h3 class="medicine-title text-start">Azithromycin 250 mg(Z-Pak)</h3>
                                                     <span class="medicine-qty"><strong class="medicine-peice">$20.00</strong></span>
                                                 </div>
@@ -517,7 +533,7 @@ include "header.php"
 
                         <div id="step-6" class="form-step-area step step-6 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-8 col-lg-6 padd-x25px">
+                                <div class="col-12 col-md-10 col-lg-8 col-xxl-6 col-xl-7  padd-x25px">
                                     <h2 class="form-sb-title text-start">Contact Info</h2>
                                     <h3 class="form-sm-title text-start">Name as it appears on your government issued ID</h3>
                                     <div class="form-input-area">
@@ -618,7 +634,7 @@ include "header.php"
 
                         </div>
 
-                        <div class="verify-code-popup-wrap popup">
+                        <div class="verify-code-popup-wrap">
                             <div class="verify-code-popup">
                                 <h3 class="popup-title upper-case">Verify your code</h3>
                                 <div class="popup-center-area">
@@ -627,19 +643,19 @@ include "header.php"
                                     <p class="form-sb-title family-regular text-start mb-1 text-black">Please enter the code in the field below in order to continue.</p>
                                     <p class="form-sb-title family-regular text-start text-black mb-5"><strong>NOTE:</strong> The code will expire in 24 hours</p>
                                     <div class="form-input-area mb-5">
-                                        <input class="form-input w-100 mx-w100" type="number" placeholder="Your Code" value="" name="" id="">
+                                        <input class="form-input w-100 mx-w100 verify-code-input" type="text" placeholder="Your Code" value="" name="" id="">
                                     </div>
                                 </div>
                                 <div class="popup-btn-area">
                                     <button type="button" class="form-btn verify-popup-opn bg-white color-red ">Cancel</button>
-                                    <button type="button" class="form-btn next-step">Continue</button>
+                                    <button type="button" class="form-btn next-step verify-cont-btn" disabled>Continue</button>
                                 </div>
                             </div>
                         </div>
 
                         <div id="step-7" class="form-step-area step step-7 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 col-lg-4 padd-x15px">
+                                <div class="col-12 col-md-8 col-lg-6 col-xxl-4 col-xl-5 padd-x15px">
                                     <h2 class="form-sb-title text-start mb-4">Mobile phone number</h2>
                                     <div class="form-input-area">
                                         <input class="form-input w-100 mx-w100" type="text" value="" placeholder="202-564-0101" name="" id="mobile-number">
@@ -655,7 +671,7 @@ include "header.php"
 
                         <div id="step-8" class="form-step-area step step-8 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 col-lg-4 padd-x15px">
+                                <div class="col-12 col-md-8 col-lg-6 col-xxl-4 col-xl-5 padd-x15px">
                                     <h2 class="form-sb-title text-start">Personal INFO</h2>
                                     <h3 class="form-sm-title text-start mt-4 mb-5">What is your biological sex?</h3>
                                     <div class="input-area">
@@ -682,7 +698,7 @@ include "header.php"
 
                         <div id="step-9" class="form-step-area step step-9">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 col-lg-4">
+                                <div class="col-12 col-md-8 col-lg-6 col-xxl-4 col-xl-5">
                                     <h2 class="form-sb-title text-start">marketing preference</h2>
                                     <h3 class="form-sm-title text-start">As a valued customer, we’d love to stay into touch with things like offers and ideas. You can un-subscribe whenever you like</h3>
                                     <div class="input-area">
@@ -714,27 +730,27 @@ include "header.php"
                             </div>
                         </div>
 
-                        <div id="step-10" class="form-step-area step step-10">
+                        <div id="step-10" class="form-step-area step step-10 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-10 col-lg-8 px-5">
+                                <div class="col-12 col-md-11 col-lg-10 col-xxl-8 col-xl-9 px-5">
                                     <h2 class="form-sb-title text-start">Shipping address</h2>
                                     <div class="shipping-input-area">
                                         <div class="form-input-area m-0">
-                                            <label class="form-sm-title mb-3 text-start d-block fnts-22px">Street Address 1</label>
-                                            <input class="form-input w-100 mx-w100" value="" type="text" placeholder="1917 Manor Rd" name="" id="">
+                                            <label class="form-sm-title mb-3  text-start d-block fnts-22px">Street Address 1</label>
+                                            <input class="form-input w-100 shipping-input mx-w100" data-id="Street-Address-1" value="" type="text" placeholder="1917 Manor Rd" name="" id="">
                                         </div>
                                         <div class="form-input-area m-0">
                                             <label class="form-sm-title mb-3 text-start d-block fnts-22px">Street Address 2</label>
-                                            <input class="form-input w-100 mx-w100" value="" type="text" placeholder="#2054" name="" id="">
+                                            <input class="form-input w-100 mx-w100 shipping-input" value="" data-id="Street-Address-2" type="text" placeholder="#2054" name="" id="">
                                         </div>
                                         <div class="form-input-area m-0">
-                                            <label class="form-sm-title mb-3 text-start d-block fnts-22px">1917 Manor Rd</label>
-                                            <input class="form-input w-100 mx-w100" value="" type="text" placeholder="1917 Manor Rd" name="" id="">
+                                            <label class="form-sm-title mb-3 text-start d-block fnts-22px">City</label>
+                                            <input class="form-input w-100 mx-w100 shipping-input" value="" data-id="City" type="text" placeholder="1917 Manor Rd" name="" id="">
                                         </div>
                                         <div class="form-input-area m-0">
                                             <label class="form-sm-title mb-3 text-start d-block fnts-22px">State\Province</label>
                                             <div class="position-relative">
-                                                <select class="form-select form-input mx-w100" aria-label="Default select example">
+                                                <select class="form-select form-input mx-w100 shipping-input" data-id="State-Province" aria-label="Default select example">
                                                     <option value="Texas">Texas</option>
                                                     <option value="Example1">Example1</option>
                                                     <option value="Example2">Example2</option>
@@ -744,20 +760,22 @@ include "header.php"
                                         </div>
                                         <div class="form-input-area m-0">
                                             <label class="form-sm-title mb-3 text-start d-block fnts-22px">Postal / Zip Code</label>
-                                            <input class="form-input w-100 mx-w100" type="number" value="" placeholder="78223" name="" id="">
+                                            <input class="form-input w-100 mx-w100 shipping-input" data-id="Zip-Code" type="number" value="" placeholder="78223" name="" id="">
                                         </div>
                                         <div class="form-input-area m-0">
                                             <label class="form-sm-title mb-3 text-start d-block fnts-22px">Country</label>
                                             <div class="position-relative">
-                                                <select class="form-select form-input mx-w100" aria-label="Default select example">
-                                                    <option selected value="United States">United States</option>
+                                                <select data-id="select-country" disabled class="form-select form-input mx-w100 country-input" aria-label="Default select example">
+                                                    <option value="">Country</option>
+                                                    <option value="United-State">United State</option>
                                                     <option value="Canada">Canada</option>
                                                 </select>
                                                 <i class="fa-solid fa-chevron-down select-angle-icon"></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="button" class="form-btn shipping-popup-btn mt-5 validate-btn">Verify Address</button>
+                                    <button type="button" class="form-btn shipping-popup-btn verify-address mt-5 validate-btn">Verify Address</button>
+                                    <button type="button" class="form-btn mt-5 validate-btn next-step verified-address-btn">Verified Address</button>
                                     <button type="button" class="step-pre-btn">
                                         <i class="fa-solid fa-arrow-left-long"></i>
                                     </button>
@@ -771,47 +789,47 @@ include "header.php"
                                 <div class="popup-center-area">
                                     <div class="form-input-area mb-4">
                                         <label class="form-sm-title mb-3 text-start d-block fnts-22px">Street Address 1</label>
-                                        <input class="form-input w-100 mx-w100" readonly type="text" value="1917 Manor Rd" name="" id="">
+                                        <input class="form-input w-100 mx-w100 shipping-input" data-id="Street-Address-1" readonly type="text" value="" name="" id="">
                                     </div>
                                     <div class="form-input-area mb-4">
                                         <label class="form-sm-title mb-3 text-start d-block fnts-22px">Street Address 2</label>
-                                        <input class="form-input w-100 mx-w100" readonly type="text" value="1917 Manor Rd" name="" id="">
+                                        <input class="form-input w-100 mx-w100 shipping-input" data-id="Street-Address-2" readonly type="text" value="" name="" id="">
                                     </div>
                                     <div class="form-input-area mb-4">
-                                        <label class="form-sm-title mb-3 text-start d-block fnts-22px">1917 Manor Rd</label>
-                                        <input class="form-input w-100 mx-w100" readonly type="text" value="United States" name="" id="">
+                                        <label class="form-sm-title mb-3 text-start d-block fnts-22px">City</label>
+                                        <input class="form-input w-100 mx-w100 shipping-input" data-id="City" readonly type="text" value="" name="" id="">
                                     </div>
                                     <div class="form-input-area mb-4">
                                         <label class="form-sm-title mb-3 text-start d-block fnts-22px">State\Province</label>
-                                        <input class="form-input w-100 mx-w100" readonly type="text" value="Texas" name="" id="">
+                                        <input class="form-input w-100 mx-w100 shipping-input" data-id="State-Province" readonly type="text" value="" name="" id="">
                                     </div>
                                     <div class="form-input-area mb-4">
                                         <label class="form-sm-title mb-3 text-start d-block fnts-22px">Postal / Zip Code</label>
-                                        <input class="form-input w-100 mx-w100" readonly type="number" value="78223" name="" id="">
+                                        <input class="form-input w-100 mx-w100 shipping-input" data-id="Zip-Code" readonly type="number" value="" name="" id="">
                                     </div>
                                     <div class="form-input-area mb-4">
                                         <label class="form-sm-title mb-3 text-start d-block fnts-22px">Country</label>
-                                        <input class="form-input w-100 mx-w100" readonly type="text" value="United States" name="" id="">
+                                        <input class="form-input w-100 mx-w100 country-input" readonly data-id="select-country" type="text" value="" name="" id="">
                                     </div>
                                     <p class="form-note text-start mb-5 text-black ">Is this address where you want to ship the meds?</p>
                                 </div>
                                 <div class="popup-btn-area">
                                     <button type="button" class="form-btn shipping-popup-btn bg-white color-red">Cancel</button>
-                                    <button type="button" class="form-btn next-step">Continue</button>
+                                    <button type="button" class="form-btn shipping-popup-btn confirm-shipp-btn">Continue</button>
                                 </div>
                             </div>
                         </div>
 
                         <div id="step-11" class="form-step-area step step-11">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 col-lg-4 padd-x25px">
+                                <div class="col-12 col-md-8 col-lg-6 col-xxl-4 col-xl-5 padd-x25px">
                                     <div class="Doctors-visits">
                                         <h2 class="form-sb-title upper-case text-start">Doctors visits</h2>
                                         <p class="form-sm-title text-start">Do you have a primary care provider and have you had a general health checkup in the last 2 years</p>
                                         <div class="flex-input-area d-flex justify-content-center align-items-center gap-5">
                                             <div class="flex-input ">
                                                 <input class="d-none input-form-radio" type="radio" value="Doctors-visits-no" name="Doctors_visits" id="Doctors-visits-no">
-                                                <label class="form-label-order width-60px mb-0" for="Doctors-visits-no">
+                                                <label class="form-label-order width-60px mb-0 doctors_visits_no" for="Doctors-visits-no">
                                                     No
                                                 </label>
                                             </div>
@@ -838,9 +856,9 @@ include "header.php"
                             </button>
                         </div>
 
-                        <div id="step-12" class="form-step-area step step-12 active">
+                        <div id="step-12" class="form-step-area step step-12 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 col-lg-4 padd-x25px">
+                                <div class="col-12 col-md-8 col-lg-6 col-xxl-4 col-xl-5 padd-x25px">
                                     <div class="kidney-liver-disease">
                                         <h2 class="form-sb-title upper-case text-start">kidney or liver disease</h2>
                                         <p class="form-sm-title text-start">Have you ever been diagnosed with kidney or liver disease</p>
@@ -853,7 +871,7 @@ include "header.php"
                                             </div>
                                             <div class="flex-input ">
                                                 <input class="d-none input-form-radio" type="radio" value="kidney-liver-disease-yes" name="kidney_liver_disease" id="kidney-liver-disease-yes">
-                                                <label class="form-label-order width-60px mb-0" for="kidney-liver-disease-yes">
+                                                <label class="form-label-order width-60px mb-0 kidney-liver-yes" for="kidney-liver-disease-yes">
                                                     Yes
                                                 </label>
                                             </div>
@@ -868,7 +886,7 @@ include "header.php"
                                         <i class="fa-solid fa-arrow-left-long"></i>
                                     </button>
                                     <button type="button" class="Doctors-visits-btn">
-                                        <i aclss="fa-solid fa-arrow-left-long"></i>
+                                        <i class="fa-solid fa-arrow-left-long"></i>
                                     </button>
                                 </div>
                             </div>
@@ -876,92 +894,108 @@ include "header.php"
 
                         <div id="step-13" class="form-step-area step step-13 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-10 col-lg-8 padd-x25px">
+                                <div class="col-12 col-md-12 col-lg-10 col-xxl-8 col-xl-9 padd-x25px">
                                     <h2 class="form-sb-title text-start">Allergies</h2>
                                     <h3 class="form-sm-title text-start mt-3 mb-5">Please Indicate if you have allergies to any of the Medications Listed:</h3>
-                                    <div class="flex-checkbox">
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Cephalosporins" value="Cephalosporins" name="Allergies" id="Cephalosporins-2">
-                                            <label class="form-label" for="Cephalosporins-2">
-                                                <span class="checkbox-square"></span>
-                                                Cephalosporins (Keflex/cephalexin, etc.)
-                                            </label>
+                                    <div class="allery-checkbox-area">
+                                        <div class="flex-checkbox">
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Cephalosporins" value="Cephalosporins" name="Allergies" id="Cephalosporins-2">
+                                                <label class="form-label" for="Cephalosporins-2">
+                                                    <span class="checkbox-square"></span>
+                                                    Cephalosporins (Keflex/cephalexin, etc.)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Penicillin" value="Penicillin" name="Allergies" id="Penicillin-2">
+                                                <label class="form-label" for="Penicillin-2">
+                                                    <span class="checkbox-square"></span>
+                                                    Penicillin's (Amoxicillin, etc.)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Fluoroquinolones" value="Fluoroquinolones" name="Allergies" id="Fluoroquinolones-2">
+                                                <label class="form-label" for="Fluoroquinolones-2">
+                                                    <span class="checkbox-square"></span>
+                                                    Fluoroquinolones (Ciprofloxacin, etc.)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Macrolides" value="Macrolides" name="Allergies" id="Macrolides-2">
+                                                <label class="form-label" for="Macrolides-2">
+                                                    <span class="checkbox-square"></span>
+                                                    Macrolides (Azithromycin, etc.)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Metronidazole" value="Metronidazole" name="Allergies" id="Metronidazole-2">
+                                                <label class="form-label" for="Metronidazole-2">
+                                                    <span class="checkbox-square"></span>
+                                                    Metronidazole
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Sulfonamides" value="Sulfonamides" name="Allergies" id="Sulfonamides-2">
+                                                <label class="form-label" for="Sulfonamides-2">
+                                                    <span class="checkbox-square"></span>
+                                                    Sulfonamides (Sulfa, Bactrim)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Tetracyclines" value="Tetracyclines" name="Allergies" id="Tetracyclines-2">
+                                                <label class="form-label" for="Tetracyclines-2">
+                                                    <span class="checkbox-square"></span>
+                                                    Tetracyclines (Doxycycline, etc.)
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Clindamycin" value="Clindamycin" name="Allergies" id="Clindamycin-2">
+                                                <label class="form-label" for="Clindamycin-2">
+                                                    <span class="checkbox-square"></span>
+                                                    Clindamycin
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Other" value="Other" name="Allergies" id="Other-2">
+                                                <label class="form-label" for="Other-2">
+                                                    <span class="checkbox-square"></span>
+                                                    Other
+                                                </label>
+                                            </div>
+                                            <div class="input-area">
+                                                <input class="d-none form-checkox allergies-input" type="checkbox" data-id="None-of-the-above" value="None-of-the-above" name="Allergies" id="None-of-the-above-2">
+                                                <label class="form-label" for="None-of-the-above-2">
+                                                    <span class="checkbox-square"></span>
+                                                    None of the above
+                                                </label>
+                                            </div>
                                         </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Penicillin"  value="Penicillin" name="Allergies" id="Penicillin-2">
-                                            <label class="form-label" for="Penicillin-2">
-                                                <span class="checkbox-square"></span>
-                                                Penicillin's (Amoxicillin, etc.)
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Fluoroquinolones" value="Fluoroquinolones" name="Allergies" id="Fluoroquinolones-2">
-                                            <label class="form-label" for="Fluoroquinolones-2">
-                                                <span class="checkbox-square"></span>
-                                                Fluoroquinolones (Ciprofloxacin, etc.)
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Macrolides" value="Macrolides" name="Allergies" id="Macrolides-2">
-                                            <label class="form-label" for="Macrolides-2">
-                                                <span class="checkbox-square"></span>
-                                                Macrolides (Azithromycin, etc.)
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Metronidazole" value="Metronidazole" name="Allergies" id="Metronidazole-2">
-                                            <label class="form-label" for="Metronidazole-2">
-                                                <span class="checkbox-square"></span>
-                                                Metronidazole
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Sulfonamides" value="Sulfonamides" name="Allergies" id="Sulfonamides-2">
-                                            <label class="form-label" for="Sulfonamides-2">
-                                                <span class="checkbox-square"></span>
-                                                Sulfonamides (Sulfa, Bactrim)
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Tetracyclines" value="Tetracyclines" name="Allergies" id="Tetracyclines-2">
-                                            <label class="form-label" for="Tetracyclines-2">
-                                                <span class="checkbox-square"></span>
-                                                Tetracyclines (Doxycycline, etc.)
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Clindamycin" value="Clindamycin" name="Allergies" id="Clindamycin-2">
-                                            <label class="form-label" for="Clindamycin-2">
-                                                <span class="checkbox-square"></span>
-                                                Clindamycin
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="Other" value="Other" name="Allergies" id="Other-2">
-                                            <label class="form-label" for="Other-2">
-                                                <span class="checkbox-square"></span>
-                                                Other
-                                            </label>
-                                        </div>
-                                        <div class="input-area">
-                                            <input class="d-none form-checkox allergies-input" type="checkbox" data-id="None-of-the-above" value="None-of-the-above" name="Allergies" id="None-of-the-above-2">
-                                            <label class="form-label" for="None-of-the-above-2">
-                                                <span class="checkbox-square"></span>
-                                                None of the above
-                                            </label>
+                                        <button type="button" class="form-btn next-step allergy-step-btn validate-btn">Continue</button>
+                                        <button type="button" class="form-btn allergy-text-btn">Continue</button>
+                                        <button type="button" class="step-pre-btn">
+                                            <i class="fa-solid fa-arrow-left-long"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-8 col-md-10 col-xxl-6 col-xl-7 ">
+                                    <div class="allergy-text-area">
+                                        <h2 class="form-sm-title text-start">ALLERGIES</h2>
+                                        <p class="form-para mb-4">Write the name of the medication and type of reaction experienced. For example: I get hives when taking penicillin. I experience swelling and difficulty breathing when taking ciprofloxacin.</p>
+                                        <p class="form-para mb-4">After completing the encounter a JASE physician may reach out to get more information and determine whether or not a prescription for an emergency supply of antibiotics is appropriate for you.</p>
+                                        <h3 class="form-sm-title fnts-22px text-start mb-4">Indicate allergies to the medications listed previously.</h3>
+                                        <textarea class="form-input w-100 mx-w100 mb-3 allergy-text-input" data-id="allergy-text" name="" id=""></textarea>
+                                        <div class="d-flex justify-content-center align-items-center gap-4 mt-4">
+                                            <button type="button" class="form-btn allergy-text-area-cancel bg-white text-black">Cancel</button>
+                                            <button type="button" class="form-btn next-step allergy-text-area-continue validate-btn">Continue</button>
                                         </div>
                                     </div>
-                                    <button type="button" class="form-btn next-step validate-btn">Continue</button>
-                                    <button type="button" class="step-pre-btn">
-                                        <i class="fa-solid fa-arrow-left-long"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
 
                         <div id="step-14" class="form-step-area step step-14 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 col-lg-4 padd-x25px">
+                                <div class="col-12 col-md-8 col-lg-6 col-xxl-4 col-xl-5 padd-x25px">
                                     <div class="chronic-medications">
                                         <h2 class="form-sb-title upper-case text-start">chronic medications</h2>
                                         <p class="form-sm-title text-start">Do you take any medication on a regular basis for a chronic condition?</p>
@@ -973,8 +1007,8 @@ include "header.php"
                                                 </label>
                                             </div>
                                             <div class="flex-input ">
-                                                <input class="d-none input-form-radio" type="radio" value="chronic_medications-yes" name="chronic_medications" id="chronic_medications-yes">
-                                                <label class="form-label-order width-60px mb-0" for="chronic_medications-yes">
+                                                <input class="d-none input-form-radio" type="radio" value="chronic_medications-yes" name="chronic_medications" id="chronic_medications_yes">
+                                                <label class="form-label-order width-60px mb-0 chronic-medications-yes" for="chronic_medications_yes">
                                                     Yes
                                                 </label>
                                             </div>
@@ -989,7 +1023,7 @@ include "header.php"
                                 </div>
                             </div>
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-8 col-lg-6 px-65px">
+                                <div class="col-12 col-md-10 col-lg-8 col-xxl-6 col-xl-7 px-65px">
                                     <div class="chronic-medications-text-area">
                                         <h2 class="form-sb-title upper-case text-start">chronic medications</h2>
                                         <p class="form-sm-title text-start">Do you take any medication on a <br> regular basis for a chronic condition?</p>
@@ -1008,7 +1042,7 @@ include "header.php"
 
                         <div id="step-15" class="form-step-area step step-15">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-8 col-lg-6 px-65px">
+                                <div class="col-12 col-md-10 col-lg-8 col-xxl-6 col-xl-7 px-65px">
                                     <div class="doctor-inquiries-area">
                                         <h2 class="form-sb-title upper-case text-start">DOCTOR INQUIRIES</h2>
                                         <p class="form-sm-title text-start">Please enter any question you may have for the Doctor. If you do not have any question, type yes</p>
@@ -1026,7 +1060,7 @@ include "header.php"
 
                         <div id="step-16" class="form-step-area step step-16">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-8 col-lg-6 padd-x25px">
+                                <div class="col-12 col-md-10 col-lg-8 col-xx-6 col-xl-7 padd-x25px">
                                     <div class="doctor-inquiries-area">
                                         <h2 class="form-sb-title upper-case text-start">CONSENT AND AGREEMENT</h2>
                                         <p class="form-sm-title text-start">I attest that by clicking the "I Acknowledge" button I agree to the following:</p>
@@ -1072,7 +1106,7 @@ include "header.php"
 
                         <div id="step-17" class="form-step-area step step-17">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 col-lg-4 padd-x15px">
+                                <div class="col-12 col-md-8 col-lg-6 col-xxl-4 col-xl-5 padd-x15px">
                                     <div class="doctor-inquiries-area">
                                         <h2 class="form-sb-title upper-case text-start">Identity verification</h2>
                                         <p class="form-sm-title mb-4 text-start">We are taking the necessary steps to verify your identity securely</p>
@@ -1095,7 +1129,7 @@ include "header.php"
 
                         <div id="step-18" class="form-step-area step step-18 ">
                             <div class="row justify-content-center">
-                                <div class="col-12 col-md-10 col-lg-8 px-65px">
+                                <div class="col-12 col-md-12 col-lg-10 col-xxl-8 col-xl-9 px-65px">
                                     <div class="identity-verify-option-area">
                                         <p class="form-sb-title text-black lh-13">We need to verify your identity. This requires government-issued photo ID as well as selfie. Please follow the instructions below to continue the verification process on your phone.</p>
                                         <p class="form-sb-title text-black lh-13 mt-4 mb-4">Alternatively, you can finish the verification on your desktop if you have a good desktop camera.</p>
@@ -1134,10 +1168,78 @@ include "header.php"
 
 
 <?php
-include "footer.php"
+    include "footer.php"
 ?>
 
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+
+<script>
+    $('.allergy-text-input').on('input', function() {
+    $('.allergy-text-input').val($(this).val());
+        if ($(this).val() != "") {
+            console.log('true')
+            $('.allergy-text-area-continue').removeAttr("disabled");
+        } else {
+            console.log('false')
+            $('.allergy-text-area-continue').attr("disabled" , true);
+        }
+    });
+
+    $('.shipping-input').on('input', function() {
+        if ($(this).val() != "") {
+            console.log("true");
+            $('.verified-address-btn').css("display" , "none");
+            $('.verify-address').css("display" , "block");
+        } else {
+            console.log('false')
+            $('.verified-address-btn').css("display" , "block");
+            $('.verify-address').css("display" , "none");
+        }
+    });
+
+    $('.verify-code-input').on('input', function() {
+        if ($(this).val() != "") {
+            console.log('true')
+            $('.verify-cont-btn').removeAttr("disabled");
+        } else {
+            console.log('false')
+            $('.verify-cont-btn').attr("disabled" , true);
+        }
+    });
+
+
+    $('.confirm-shipp-btn').click(function() {
+        $('.verify-address').css("display" , "none");
+        $('.verified-address-btn').css("display" , "block");
+    })
+
+</script>
+
+<script>
+    $('input[name="Allergies"]').change(function() {
+        if ($(this).val() === "None-of-the-above" && $(this).is(':checked')) {
+            $('input[name="Allergies"]').not(this).prop('checked', false);
+            $(".allergy-text-btn").css("display", "none");
+            $(".allergy-step-btn").css("display", "block").attr('disabled', false);
+        } else {
+            $('input[name="Allergies"][value="None-of-the-above"]').prop('checked', false);
+            $(".allergy-text-btn").css("display", "block");
+            $(".allergy-step-btn").hide().attr('disabled',true);
+        }
+    });
+</script>
+
+<script>
+    $('.allergy-text-btn').click(function() {
+        $('.allergy-text-area').css("display" , "block");
+        $('.allery-checkbox-area').css("display" , "none");
+    });
+
+    $('.allergy-text-area-cancel').click(function() {
+        $('.allergy-text-area').css("display" , "none");
+        $('.allery-checkbox-area').css("display" , "block");
+    });
+</script>
 
 <script>
     $("#mobile-number").inputmask({
@@ -1269,95 +1371,3 @@ include "footer.php"
 
 
 
-<script>
-    const DoctorsVisitsInputs = document.getElementsByName('Doctors_visits');
-
-    DoctorsVisitsInputs.forEach((DoctorsVisitsInput) => {
-        DoctorsVisitsInput.addEventListener('change', () => {
-            console.log(DoctorsVisitsInput.value);
-            if (DoctorsVisitsInput.value === "Doctors-visits-no") {
-                $(".Doctors-visits-unabel").css("display", "block");
-                $(".Doctors-visits").css("display", "none");
-                $(".step-pre-btn").css("display", "none");
-                $(".Doctors-visits-btn").css("display", "block");
-            } else {
-                $(".Doctors-visits-unabel").css("display", "none");
-                $(".Doctors-visits").css("display", "block");
-                $(".step-pre-btn").css("display", "block");
-                $(".Doctors-visits-btn").css("display", "none");
-            }
-        });
-    });
-
-
-    const chronicMedications = document.getElementsByName('chronic_medications');
-
-    chronicMedications.forEach((chronicMedication) => {
-        chronicMedication.addEventListener('change', () => {
-            if (chronicMedication.value === "chronic_medications-yes") {
-                $(".chronic-medications-text-area").css("display", "block");
-                $(".chronic-medications").css("display", "none");
-                $(".step-pre-btn").css("display", "none");
-                $(".Doctors-visits-btn").css("display", "block");
-            } else {
-                $(".chronic-medications-text-area").css("display", "none");
-                $(".chronic-medications").css("display", "block");
-                $(".step-pre-btn").css("display", "block");
-                $(".Doctors-visits-btn").css("display", "none");
-            }
-        });
-    });
-
-    $('.chronic-medications-cancel').click(function() {
-        $(".chronic-medications-text-area").css("display", "none");
-        $(".chronic-medications").css("display", "block");
-    })
-
-
-    const kidneyLiverDiseaseInputs = document.getElementsByName('kidney_liver_disease');
-
-    kidneyLiverDiseaseInputs.forEach((kidneyLiverDiseaseInput) => {
-        kidneyLiverDiseaseInput.addEventListener('change', () => {
-            console.log(kidneyLiverDiseaseInput.value);
-            if (kidneyLiverDiseaseInput.value === "kidney-liver-disease-yes") {
-                $(".kidney-liver-disease-unable").css("display", "block");
-                $(".kidney-liver-disease").css("display", "none");
-                $(".step-pre-btn").css("display", "none");
-                $(".Doctors-visits-btn").css("display", "block");
-            } else {
-                $(".kidney-liver-disease-unable").css("display", "none");
-                $(".kidney-liver-disease").css("display", "block");
-                $(".step-pre-btn").css("display", "block");
-                $(".Doctors-visits-btn").css("display", "none");
-            }
-        });
-    });
-
-    $('.Doctors-visits-btn').click(function() {
-        $(".Doctors-visits").css("display", "block");
-        $(".kidney-liver-disease").css("display", "block");
-        $(".kidney-liver-disease-unable").css("display", "none");
-        $(".Doctors-visits-unabel").css("display", "none");
-        $(".step-pre-btn").css("display", "block");
-    });
-</script>
-
-
-
-
-<script>
-
-
-    $('input[data-id]').change(function() {
-        $(`input[data-id=${$(this).data('id')}]`).attr('checked', true)
-    });
-
-
-
-    $('allergies-input input[data-id]').change(function() {
-        $(`input[data-id=${$(this).data('id')}]`).attr('checked', true)
-    })
-    
-    
-
-</script>
