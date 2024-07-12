@@ -1,0 +1,184 @@
+@media (max-width:1620px) {
+    html {
+        font-size: 58%;
+    }
+    .form-section {
+        min-height: calc(100vh - 84px);
+    }
+}
+@media (max-width:1500px) {
+    html {
+        font-size: 54%;
+    }
+    .flex-checkbox {
+        gap: 20px 10px;
+    }
+    .emergency-medication-list, .promotion-code-area {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width:1400px) {
+    .emergency-medication-area {
+        gap: 15px;
+    }
+}
+@media (max-width:1200px) {
+    html {
+        font-size: 52%;
+    }
+    .emergency-medication-img-area {
+        width: 100%;
+        height: 140px;
+        max-width: 140px;
+    }
+    .emergency-medication-img {
+        width: 100%;
+        height: 138px;
+        max-width: 138px;
+    }
+    .form-section {
+        min-height: calc(100vh - 66px);
+    }
+}
+
+@media (max-width:1024px) {
+    .bg-left-img {
+        width: 16vw;
+    }
+}
+
+@media (max-width:991px) {
+    html {
+        font-size: 50%;
+    }
+    .bg-left-img {
+        display: none;
+    }
+    .form-section {
+        min-height: calc(100vh - 63px);
+    }
+    .logo {
+        width: 35vw;
+    }
+    .padd-x25px {
+        padding: 0 0px;
+    }
+    .px-65px {
+        padding: 0 12px;
+    }
+    .emergency-medication-img-area {
+        width: 100%;
+        height: 140px;
+        max-width: 140px;
+    }
+    .emergency-medication-img {
+        width: 100%;
+        max-width: 130px;
+        height: 130px;
+    }
+    .select-add-ons-popup {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width:767px) {
+    .select2.select2-container.select2-container--default {
+        max-width: 100%;
+    }
+    .select2-results__option {
+        max-width: 100%;
+    }
+    .flex-checkbox .input-area {
+        width: 100%;
+        max-width: 100%;
+    }
+    .emergency-medication-detail {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .emergency-medication-area {
+        gap: 0;
+        justify-content: center;
+    }
+    .emergency-medication-area {
+        gap: 35px;
+        margin-bottom: 30px;
+    }
+    .add-ons-medication-area {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .verify-code-popup, .shipping-address-popup {
+        max-width: 90vw;
+    }
+    .popup-btn-area {
+        padding: 20px 10px;
+    }
+    .popup-center-area {
+        padding: 0 10px;
+    }
+    .popup-title {
+        padding: 20px 0 17px;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:575px) {
+    html {
+        font-size: 46%;
+    }
+    .logo {
+        width: 100%;
+        max-width: 220px;
+    }
+    #progress-bar {
+        height: 6px;
+    }
+    .padd-x25px {
+        padding: 0 12px;
+    }
+    .form-btn.w-150px {
+        max-width: 120px;
+    }
+    .emergency-medication-list, .promotion-code-area {
+        padding: 20px 20px;
+    }
+    .form-input {
+        height: 40px;
+    }
+    .form-btn, .allergy-step-btn {
+        height: 40px;
+        font-size: 1.6rem;
+    }
+    .shipping-input-area .form-input-area {
+        width: 100%;
+    }
+    
+}
+@media (max-width:480px) {
+    html {
+        font-size: 44%;
+    }
+    .input-radio-area {
+        max-width: 160px;
+        width: 100%;
+    }
+    .form-section {
+        min-height: calc(100vh - 46px);
+    }
+}
+
+@media (max-width:430px) {
+    .add-ons-medication-area {
+        padding: 20px 10px 20px 10px !important;
+    }
+    .medication-title-area {
+        flex-direction: column;
+        gap: 5px;
+        justify-content: start;
+        align-items: start;
+    }
+    .select-add-ons-top, .select-add-ons-end {
+        padding: 20px 10px;
+    }
+}

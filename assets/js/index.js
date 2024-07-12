@@ -1,43 +1,3 @@
-// // step form js
-
-// const allSteps = document.querySelectorAll(".step").length;
-// const progressBar = document.getElementById("progress-bar");
-
-// let progressStatus = 100 / allSteps;
-
-// const progressStatusInit = progressStatus;
-
-// console.log(progressStatusInit);
-
-// const progressStatusPrevious = progressStatus;
-
-// progressBar.style.width = `${progressStatus}%`;
-
-// let step = 1;
-
-// $(".next-step").click(function () {
-//   setUpdate((step = step + 1));
-//   $(".verify-code-popup-wrap").removeClass("active");
-//   $(".shipping-address-popup-wrap").removeClass("active");
-//   progressUpdate(progressStatus, progressStatusInit);
-// });
-
-// $(".step-pre-btn").click(function () {
-//   setUpdate((step = step - 1));
-//   progressUpdate(progressMinus , progressStatusInit);
-// });
-
-// function setUpdate(step) {
-//   $(`.step`).removeClass("active");
-//   $(`.step-${step}`).addClass("active");
-// }
-
-// function progressUpdate(progressWidth, step) {
-//   progressStatus = progressWidth + step;
-//   progressBar.style.width = `${progressStatus}%`;
-//   progressMinus = progressWidth - step;
-//   console.log(progressStatus);
-// }
 
 // In your Javascript (external .js resource or <script> tag)
 $(document).ready(function () {
@@ -104,4 +64,65 @@ verifyButton.addEventListener('click', function() {
         // Proceed with your further logic here
     }
 });
+});
+
+
+
+$('.doctors_visits_no').click(function() {
+  $(".Doctors-visits-unabel").css("display", "block");
+  $(".Doctors-visits").css("display", "none");
+  $(".step-pre-btn").css("display", "none");
+  $(".Doctors-visits-btn").css("display", "block");
+})
+
+
+$('.chronic-medications-yes').click(function() {
+  $(".chronic-medications-text-area").css("display", "block");
+  $(".chronic-medications").css("display", "none");
+  $(".step-pre-btn").css("display", "none");
+  $(".Doctors-visits-btn").css("display", "block");
+})
+
+$('.chronic-medications-cancel').click(function() {
+  $(".chronic-medications-text-area").css("display", "none");
+  $(".chronic-medications").css("display", "block");
+})
+
+
+$('.kidney-liver-yes').click(function() {
+  $(".kidney-liver-disease-unable").css("display", "block");
+  $(".kidney-liver-disease").css("display", "none");
+  $(".step-pre-btn").css("display", "none");
+  $(".Doctors-visits-btn").css("display", "block");
+})
+
+$('.Doctors-visits-btn').click(function() {
+  $(".Doctors-visits").css("display", "block");
+  $(".kidney-liver-disease").css("display", "block");
+  $(".kidney-liver-disease-unable").css("display", "none");
+  $(".Doctors-visits-unabel").css("display", "none");
+  $(".Doctors-visits-btn").css("display", "none");
+  $(".step-pre-btn").css("display", "block");
+});
+
+
+$('input[data-id]').change(function() {
+  $(`input[data-id=${$(this).data('id')}]`).attr('checked', true)
+});
+
+
+
+$('allergies-input input[data-id]').change(function() {
+  $(`input[data-id=${$(this).data('id')}]`).attr('checked', true)
+})
+
+
+$('.country-input[data-id]').change(function() {
+  selectedValue = $(this).val();
+  $(`.country-input[data-id=${$(this).data('id')}]`).val(selectedValue);
+});
+
+$('.shipping-input[data-id]').change(function() {
+const newValue = $(this).val();
+$(`.shipping-input[data-id=${$(this).data('id')}]`).val(newValue);
 });

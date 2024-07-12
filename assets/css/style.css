@@ -228,6 +228,9 @@ input[type="number"] {
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 #00000045;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input-form-radio:checked + .form-label-order {
   background-color: var(--red-color);
@@ -291,7 +294,7 @@ input[type="number"] {
 .order-imput:checked + .form-label .radio-circle::before {
   background: var(--red-color);
 }
-.form-btn {
+.form-btn , .allergy-step-btn {
   font-size: 2rem;
   font-family: var(--Inter-Medium-fonts);
   color: white;
@@ -456,10 +459,11 @@ input[type="number"] {
 }
 .checkbox-square {
   height: 18px;
-  width: 18px;
+  max-width: 18px;
   display: block;
   border: 1px solid black;
   position: relative;
+  width: 100%;
 }
 .checkbox-square::before {
   height: 14px;
@@ -811,7 +815,7 @@ textarea.form-input {
   padding: 20px 20px;
 }
 .select-add-ons-list {
-  height: 80vh;
+  height: 70vh;
   background: rgb(238, 240, 245);
   background: linear-gradient(
     -81deg,
@@ -822,14 +826,22 @@ textarea.form-input {
   padding: 30px 20px;
 }
 .add-ons-medication-area {
-  background-color: white;
-  border-radius: 5px;
-}
-.add-ons-medication-area {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  padding: 20px 30px !important;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+}
+.add-ons-medication-area .checkbox-square {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  height: 15px;
+  width: 15px;
 }
 .add-ons-medication-check:checked
   + .add-ons-medication-area
@@ -846,6 +858,7 @@ textarea.form-input {
 }
 #selected-add-ons .add-ons-medication-area {
   padding: 20px 20px;
+  position: relative;
 }
 .error {
   font-size: 1.2rem;
@@ -862,6 +875,38 @@ textarea.form-input {
 .Doctors-visits-btn {
   display: none;
 }
-
-
+.allergy-text-btn {
+  display: none;
+}
+.form-para {
+  font-size: 1.6rem;
+  font-family: var(--Inter-Regular-fonts);
+  color: black;
+  text-align: start;
+}
+.allergy-text-area {
+  display: none;
+}
+.form-select.form-input:disabled{
+  background: #d1d1d1;
+  cursor: not-allowed;
+}
+.verified-address-btn {
+  display: none;
+}
+.remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: black;
+  font-size: 1.6rem;
+  background-color: transparent;
+  border: none;
+  font-family: var(--Inter-Medium-fonts);
+}
+.medication-title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /* form css end */
