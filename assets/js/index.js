@@ -112,9 +112,7 @@ $('input[data-id]').change(function() {
 
 
 
-$('allergies-input input[data-id]').change(function() {
-  $(`input[data-id=${$(this).data('id')}]`).attr('checked', true)
-})
+
 
 
 $('.country-input[data-id]').change(function() {
@@ -126,3 +124,15 @@ $('.shipping-input[data-id]').change(function() {
 const newValue = $(this).val();
 $(`.shipping-input[data-id=${$(this).data('id')}]`).val(newValue);
 });
+
+
+
+
+
+// const allergiesInputs = document.querySelectorAll('.allergies-input');
+
+// allergiesInputs.forEach((allergiesInput) => {
+//   allergiesInput.addEventListener('change' , () => {
+//     console.log(allergiesInput.value);
+//   })
+// })  
