@@ -376,8 +376,6 @@ include "header.php"
 
                                 <div class="select-add-ons-list">
 
-
-
                                     <div class="add-ons-medication mb-4">
                                         <input type="checkbox" class="d-none add-ons-medication-check" name="add_ons_medication" id="add_ons_medication-1">
                                         <label class="add-ons-medication-area p-4" for="add_ons_medication-1" data-title="Doxycycline 100 mg" data-price="$20.00" data-description="Doxycycline, or Doxy, is an antibiotic in the tetracycline class." data-qty="28 tablets" data-treats="Pneumonia, Dental Infection, Sinusitis" data-image="./assets/images/medicine-img-1.png">
@@ -416,7 +414,7 @@ include "header.php"
 
                                     <div class="add-ons-medication mb-4">
                                         <input type="checkbox" class="d-none add-ons-medication-check" name="add_ons_medication" id="add_ons_medication-2">
-                                        <label class="add-ons-medication-area p-4" for="add_ons_medication-2">
+                                        <label class="add-ons-medication-area p-4" for="add_ons_medication-2" data-title="Amoxicillin-Clavulanate 875-125 mg" data-price="$50.00" data-description="Doxycycline, or Doxy, is an antibiotic in the tetracycline class." data-qty="20 tablets" data-treats="Pneumonia, Dental Infection, Sinusitis" data-image="./assets/images/medicine-img-2.png">
                                             <span class="checkbox-square"></span>
                                             <div class="emergency-medication-img-area">
                                                 <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-2.png" alt="">
@@ -452,14 +450,14 @@ include "header.php"
 
                                     <div class="add-ons-medication mb-4">
                                         <input type="checkbox" class="d-none add-ons-medication-check" name="add_ons_medication" id="add_ons_medication-3">
-                                        <label class="add-ons-medication-area p-4" for="add_ons_medication-3">
+                                        <label class="add-ons-medication-area p-4" for="add_ons_medication-3" data-title="Doxycycline 100 mg" data-price="$20.00" data-description="Doxycycline, or Doxy, is an antibiotic in the tetracycline class." data-qty="28 tablets" data-treats="Pneumonia, Dental Infection, Sinusitis" data-image="./assets/images/medicine-img-1.png">
                                             <span class="checkbox-square"></span>
                                             <div class="emergency-medication-img-area">
-                                                <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-2.png" alt="">
+                                                <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-1.png" alt="">
                                             </div>
                                             <div class="emergency-medication-detail">
-                                                <div class=" mb-4 medication-title-area">
-                                                    <h3 class="medicine-title text-start">Ciprofloxacin 500 mg</h3>
+                                                <div class="mb-4 medication-title-area">
+                                                    <h3 class="medicine-title text-start">Doxycycline 100 mg</h3>
                                                     <span class="medicine-qty"><strong class="medicine-peice">$20.00</strong></span>
                                                 </div>
                                                 <div class="d-flex justify-content-between flex-wrap gap-2">
@@ -488,20 +486,20 @@ include "header.php"
 
                                     <div class="add-ons-medication mb-4">
                                         <input type="checkbox" class="d-none add-ons-medication-check" name="add_ons_medication" id="add_ons_medication-4">
-                                        <label class="add-ons-medication-area p-4" for="add_ons_medication-4">
+                                        <label class="add-ons-medication-area p-4" for="add_ons_medication-4" data-title="Amoxicillin-Clavulanate 875-125 mg" data-price="$50.00" data-description="Doxycycline, or Doxy, is an antibiotic in the tetracycline class." data-qty="20 tablets" data-treats="Pneumonia, Dental Infection, Sinusitis" data-image="./assets/images/medicine-img-2.png">
                                             <span class="checkbox-square"></span>
                                             <div class="emergency-medication-img-area">
-                                                <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-1.png" alt="">
+                                                <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-2.png" alt="">
                                             </div>
                                             <div class="emergency-medication-detail">
                                                 <div class="mb-4 medication-title-area">
-                                                    <h3 class="medicine-title text-start">Azithromycin 250 mg(Z-Pak)</h3>
-                                                    <span class="medicine-qty"><strong class="medicine-peice">$20.00</strong></span>
+                                                    <h3 class="medicine-title text-start">Amoxicillin-Clavulanate 875-125 mg</h3>
+                                                    <span class="medicine-qty"><strong class="medicine-peice">$50.00</strong></span>
                                                 </div>
                                                 <div class="d-flex justify-content-between flex-wrap gap-2">
                                                     <div class="text-start medication-detail-left">
                                                         <p class="medicine-discrip">Doxycycline, or Doxy, is an antibiotic in the tetracycline class.</p>
-                                                        <span class="medicine-qty"><strong>Qty:</strong>28 tables</span>
+                                                        <span class="medicine-qty"><strong>Qty:</strong>20 tables</span>
                                                     </div>
                                                     <div class="medication-detail-right">
                                                         <h4 class="treated-title text-start">Condition Treated:</h4>
@@ -1216,17 +1214,44 @@ include "header.php"
 </script>
 
 <script>
+    
     $('input[name="Allergies"]').change(function() {
         if ($(this).val() === "None-of-the-above" && $(this).is(':checked')) {
+            console.log($(this).val());
             $('input[name="Allergies"]').not(this).prop('checked', false);
-            $(".allergy-text-btn").css("display", "none");
-            $(".allergy-step-btn").css("display", "block").attr('disabled', false);
+            $(".allergy-step-btn").show().prop('disabled', false);
+            $(".allergy-text-btn").hide();
         } else {
+            console.log($(this).val());
             $('input[name="Allergies"][value="None-of-the-above"]').prop('checked', false);
-            $(".allergy-text-btn").css("display", "block");
-            $(".allergy-step-btn").hide().attr('disabled',true);
+            $(".allergy-step-btn").hide().prop('disabled', true);
+            $(".allergy-text-btn").show();
+        }
+
+        // Check if any other checkboxes are checked
+        if ($('input[name="Allergies"]:checked').not('[value="None-of-the-above"]').length > 0) {
+            $(".allergy-step-btn").hide();
+            $(".allergy-text-btn").show();
+        } else if ($('input[name="Allergies"]:checked').length === 0) {
+            $(".allergy-step-btn").show().prop('disabled', true);
+            $(".allergy-text-btn").hide();
         }
     });
+
+
+
+
+// Event delegation for checkboxes across steps
+$(document).on('change', '.allergies-input', function() {
+    if ($(this).is(':checked')) {
+        console.log($(this).val());
+        $(`input[data-id=${$(this).data('id')}]`).prop('checked', true);
+    } else {
+        $(`input[data-id=${$(this).data('id')}]`).prop('checked', false);
+    }
+});
+
+
 </script>
 
 <script>
