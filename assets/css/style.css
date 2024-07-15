@@ -911,4 +911,13 @@ textarea.form-input {
   justify-content: space-between;
   align-items: center;
 }
+.loader-area.active {
+  display: none;
+}
+.emergency-medication-supply {
+  display: none;
+}
+.emergency-medication-supply.active {
+  display: block;
+}
 /* form css end */

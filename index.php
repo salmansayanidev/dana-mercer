@@ -211,159 +211,160 @@ include "header.php"
                         <div id="step-5" class="form-step-area step step-5 ">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-12 col-lg-10 col-xxl-8 col-xl-9 px-65px">
-                                    <div class="loader-area d-none">
+                                    <div class="loader-area">
                                         <h3 class="form-sm-title text-start mb-5">Please Indicate if you have allergies to any of the Medications Listed:</h3>
                                         <div class="spinner-border" role="status">
                                             <span class="visually-hidden">Loading...</span>
                                         </div>
                                     </div>
-                                    <h2 class="form-sb-title text-center mb-5">Based on your encounter and medical history. we’ve listed <br> your prescription options below.</h2>
-                                    <h3 class="form-sm-title text-center mb-5">Emergency Medication Supply - Base Case</h3>
-                                    <div class="emergency-medication-list">
+                                    <div class="emergency-medication-supply">
+                                        <h2 class="form-sb-title text-center mb-5">Based on your encounter and medical history. we’ve listed <br> your prescription options below.</h2>
+                                        <h3 class="form-sm-title text-center mb-5">Emergency Medication Supply - Base Case</h3>
+                                        
+                                        <div class="emergency-medication-list">
 
-                                        <div class="emergency-medication-area">
-                                            <div class="emergency-medication-img-area">
-                                                <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-1.png" alt="">
-                                            </div>
-                                            <div class="emergency-medication-detail">
-                                                <h3 class="medicine-title mb-4 text-start">Amoxicillin-Clavulanate 875-125 mg</h3>
-                                                <div class="d-flex justify-content-between flex-wrap gap-2">
-                                                    <div class="text-start medication-detail-left">
-                                                        <p class="medicine-discrip">Amoxicillin-Clavulanate, also known as Augmentin, is a beta-lactam antibiotic. It belongs to the of antibiotics.</p>
-                                                        <span class="medicine-qty"><strong>Qty:</strong>28 tables</span>
-                                                    </div>
-                                                    <div class="medication-detail-right">
-                                                        <h4 class="treated-title text-start">Condition Treated:</h4>
-                                                        <ul class="condition-treated-list">
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Pneumonia</span>
-                                                            </li>
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Dental Infection</span>
-                                                            </li>
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Sinusits</span>
-                                                            </li>
-                                                        </ul>
+                                            <div class="emergency-medication-area">
+                                                <div class="emergency-medication-img-area">
+                                                    <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-1.png" alt="">
+                                                </div>
+                                                <div class="emergency-medication-detail">
+                                                    <h3 class="medicine-title mb-4 text-start">Amoxicillin-Clavulanate 875-125 mg</h3>
+                                                    <div class="d-flex justify-content-between flex-wrap gap-2">
+                                                        <div class="text-start medication-detail-left">
+                                                            <p class="medicine-discrip">Amoxicillin-Clavulanate, also known as Augmentin, is a beta-lactam antibiotic. It belongs to the of antibiotics.</p>
+                                                            <span class="medicine-qty"><strong>Qty:</strong>28 tables</span>
+                                                        </div>
+                                                        <div class="medication-detail-right">
+                                                            <h4 class="treated-title text-start">Condition Treated:</h4>
+                                                            <ul class="condition-treated-list">
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Pneumonia</span>
+                                                                </li>
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Dental Infection</span>
+                                                                </li>
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Sinusits</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="emergency-medication-area">
-                                            <div class="emergency-medication-img-area">
-                                                <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-2.png" alt="">
-                                            </div>
-                                            <div class="emergency-medication-detail">
-                                                <h3 class="medicine-title mb-4 text-start">Azithromycin 250 mg(Z-Pak)</h3>
-                                                <div class="d-flex justify-content-between flex-wrap gap-2">
-                                                    <div class="text-start medication-detail-left">
-                                                        <p class="medicine-discrip">Azithromycin, also know as Zithromax or Z-pak, is a macrolide antibiotic.</p>
-                                                        <span class="medicine-qty"><strong>Qty:</strong>22 tables</span>
-                                                    </div>
-                                                    <div class="medication-detail-right">
-                                                        <h4 class="treated-title text-start">Condition Treated:</h4>
-                                                        <ul class="condition-treated-list">
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Strep Throat</span>
-                                                            </li>
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Ear Infection</span>
-                                                            </li>
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Lyme Disease</span>
-                                                            </li>
-                                                        </ul>
+                                            <div class="emergency-medication-area">
+                                                <div class="emergency-medication-img-area">
+                                                    <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-2.png" alt="">
+                                                </div>
+                                                <div class="emergency-medication-detail">
+                                                    <h3 class="medicine-title mb-4 text-start">Azithromycin 250 mg(Z-Pak)</h3>
+                                                    <div class="d-flex justify-content-between flex-wrap gap-2">
+                                                        <div class="text-start medication-detail-left">
+                                                            <p class="medicine-discrip">Azithromycin, also know as Zithromax or Z-pak, is a macrolide antibiotic.</p>
+                                                            <span class="medicine-qty"><strong>Qty:</strong>22 tables</span>
+                                                        </div>
+                                                        <div class="medication-detail-right">
+                                                            <h4 class="treated-title text-start">Condition Treated:</h4>
+                                                            <ul class="condition-treated-list">
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Strep Throat</span>
+                                                                </li>
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Ear Infection</span>
+                                                                </li>
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Lyme Disease</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="emergency-medication-area">
-                                            <div class="emergency-medication-img-area">
-                                                <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-1.png" alt="">
-                                            </div>
-                                            <div class="emergency-medication-detail">
-                                                <h3 class="medicine-title mb-4 text-start">Ciprofloxacin 500 mg</h3>
-                                                <div class="d-flex justify-content-between flex-wrap gap-2">
-                                                    <div class="text-start medication-detail-left">
-                                                        <p class="medicine-discrip">Ciprofloxacin, also known as Cipro, is an antibiotic in the fluoroquinolone</p>
-                                                        <span class="medicine-qty"><strong>Qty:</strong>28 tables</span>
-                                                    </div>
-                                                    <div class="medication-detail-right">
-                                                        <h4 class="treated-title text-start">Condition Treated:</h4>
-                                                        <ul class="condition-treated-list">
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Pneumonia</span>
-                                                            </li>
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Dental Infection</span>
-                                                            </li>
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Sinusits</span>
-                                                            </li>
-                                                        </ul>
+                                            <div class="emergency-medication-area">
+                                                <div class="emergency-medication-img-area">
+                                                    <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-1.png" alt="">
+                                                </div>
+                                                <div class="emergency-medication-detail">
+                                                    <h3 class="medicine-title mb-4 text-start">Ciprofloxacin 500 mg</h3>
+                                                    <div class="d-flex justify-content-between flex-wrap gap-2">
+                                                        <div class="text-start medication-detail-left">
+                                                            <p class="medicine-discrip">Ciprofloxacin, also known as Cipro, is an antibiotic in the fluoroquinolone</p>
+                                                            <span class="medicine-qty"><strong>Qty:</strong>28 tables</span>
+                                                        </div>
+                                                        <div class="medication-detail-right">
+                                                            <h4 class="treated-title text-start">Condition Treated:</h4>
+                                                            <ul class="condition-treated-list">
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Pneumonia</span>
+                                                                </li>
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Dental Infection</span>
+                                                                </li>
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Sinusits</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="emergency-medication-area">
-                                            <div class="emergency-medication-img-area">
-                                                <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-1.png" alt="">
-                                            </div>
-                                            <div class="emergency-medication-detail">
-                                                <h3 class="medicine-title mb-4 text-start">Doxycycline 100 mg</h3>
-                                                <div class="d-flex justify-content-between flex-wrap gap-2">
-                                                    <div class="text-start medication-detail-left">
-                                                        <p class="medicine-discrip">Doxycycline, or Doxy, is an antibiotic in the tetracycline class.</p>
-                                                        <span class="medicine-qty"><strong>Qty:</strong>28 tables</span>
-                                                    </div>
-                                                    <div class="medication-detail-right">
-                                                        <h4 class="treated-title text-start">Condition Treated:</h4>
-                                                        <ul class="condition-treated-list">
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Pneumonia</span>
-                                                            </li>
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Dental Infection</span>
-                                                            </li>
-                                                            <li class="">
-                                                                <span class="medicine-discrip d-block mb-1 mt-0">Sinusits</span>
-                                                            </li>
-                                                        </ul>
+                                            <div class="emergency-medication-area">
+                                                <div class="emergency-medication-img-area">
+                                                    <img class="img-fluid emergency-medication-img" src="./assets/images/medicine-img-1.png" alt="">
+                                                </div>
+                                                <div class="emergency-medication-detail">
+                                                    <h3 class="medicine-title mb-4 text-start">Doxycycline 100 mg</h3>
+                                                    <div class="d-flex justify-content-between flex-wrap gap-2">
+                                                        <div class="text-start medication-detail-left">
+                                                            <p class="medicine-discrip">Doxycycline, or Doxy, is an antibiotic in the tetracycline class.</p>
+                                                            <span class="medicine-qty"><strong>Qty:</strong>28 tables</span>
+                                                        </div>
+                                                        <div class="medication-detail-right">
+                                                            <h4 class="treated-title text-start">Condition Treated:</h4>
+                                                            <ul class="condition-treated-list">
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Pneumonia</span>
+                                                                </li>
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Dental Infection</span>
+                                                                </li>
+                                                                <li class="">
+                                                                    <span class="medicine-discrip d-block mb-1 mt-0">Sinusits</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <h4 class="total text-end mt-5">Base Case Price: <span>$ 250.95</span></h4>
                                         </div>
 
-                                        <h4 class="total text-end mt-5">Base Case Price: <span>$ 250.95</span></h4>
+                                        <div id="selected-add-ons" class="mt-5">
+                                            <h3 class="form-sm-title text-center">Add-Ons</h3>
+                                        </div>
+
+                                        <button type="button" class="form-btn add-ons-popup-btn mb-5 mt-5">Select Add-Ons</button>
+
+                                        <div class="promotion-code-area">
+                                            <h2 class="form-sb-title text-start mb-4">Enter promotion code:</h2>
+                                            <div class="promotion-input-area">
+                                                <input class="form-input" type="number" value="" name="promotion_code" id="">
+                                                <button class="form-btn w-150px" type="button">Apply</button>
+                                            </div>
+                                            <div class="your-total-area">
+                                                <span class="total">Your Total</span>
+                                                <span class="total">$250.95</span>
+                                            </div>
+                                        </div>
+                                        <p class="form-note mt-5 mb-5">If you'd like to continue with your purchase, click the "Proceed with Encounter" button below.</p>
+                                        <button type="button" class="form-btn next-step">Proceed with Encounter</button>
+                                        <button type="button" class="step-pre-btn">
+                                            <i class="fa-solid fa-arrow-left-long"></i>
+                                        </button>
                                     </div>
-
-                                    <div id="selected-add-ons" class="mt-5">
-                                        <h3 class="form-sm-title text-center">Add-Ons</h3>
-
-
-                                    </div>
-
-                                    <button type="button" class="form-btn add-ons-popup-btn mb-5 mt-5">Select Add-Ons</button>
-
-                                    <div class="promotion-code-area">
-                                        <h2 class="form-sb-title text-start mb-4">Enter promotion code:</h2>
-                                        <div class="promotion-input-area">
-                                            <input class="form-input" type="number" value="" name="promotion_code" id="">
-                                            <button class="form-btn w-150px" type="button">Apply</button>
-                                        </div>
-                                        <div class="your-total-area">
-                                            <span class="total">Your Total</span>
-                                            <span class="total">$250.95</span>
-                                        </div>
-                                    </div>
-                                    <p class="form-note mt-5 mb-5">If you'd like to continue with your purchase, click the "Proceed with Encounter" button below.</p>
-                                    <button type="button" class="form-btn next-step">Proceed with Encounter</button>
-                                    <button type="button" class="step-pre-btn">
-                                        <i class="fa-solid fa-arrow-left-long"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1244,7 +1245,6 @@ include "header.php"
 // Event delegation for checkboxes across steps
 $(document).on('change', '.allergies-input', function() {
     if ($(this).is(':checked')) {
-        console.log($(this).val());
         $(`input[data-id=${$(this).data('id')}]`).prop('checked', true);
     } else {
         $(`input[data-id=${$(this).data('id')}]`).prop('checked', false);
@@ -1380,7 +1380,9 @@ $(document).on('change', '.allergies-input', function() {
                     </div>
                 </div>
             </div>
-            <button type="button" class="remove-btn">Remove</button>
+            <button type="button" class="remove-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
         `;
 
         // Append the medication div to the selectedAddOns container
