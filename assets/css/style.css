@@ -248,22 +248,23 @@ input[type="number"] {
   font-size: 2rem;
   color: black;
   font-family: var(--Inter-Regular-fonts);
-  padding: 14px 22px;
+  padding: 14px 19px 14px 19px;
   height: 50px;
   border-radius: 5px;
   background: rgb(238, 240, 245);
   background: linear-gradient(
-    183deg,
-    rgba(238, 240, 245, 1) 0%,
-    rgba(230, 233, 239, 1) 100%
-  );
+  183deg,
+  rgba(238, 240, 245, 1) 0%,
+  rgba(230, 233, 239, 1) 100%
+);
   margin: 0;
   box-shadow: -12px -12px 20px 0 #ffffffcc, 10px 10px 20px 0 #a6b4c8c9;
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   cursor: pointer;
+  text-align: start;
 }
 .radio-circle {
   display: block;
