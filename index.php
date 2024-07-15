@@ -36,7 +36,7 @@ include "header.php"
                                         <input class="d-none order-imput" value="standard-jase" type="radio" name="like_to_order" id="standard-jase">
                                         <label class="form-label" for="standard-jase">
                                             <span class="radio-circle"></span>
-                                            Standard Jase Case (18 or order)
+                                            Standard ReadyMed Case (18 or order)
                                         </label>
                                     </div>
                                     <div class="input-area">
@@ -1381,7 +1381,7 @@ $(document).on('change', '.allergies-input', function() {
                 </div>
             </div>
             <button type="button" class="remove-btn">
-                <i class="fa-solid fa-xmark"></i>
+                Remove
             </button>
         `;
 
