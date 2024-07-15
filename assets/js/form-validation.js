@@ -53,20 +53,32 @@ function validateStep(currentStep) {
     ) {
       if (!$(`input[name="${$(this).attr("name")}"]:checked`).length) {
         isValid = false;
-        return false; // break the loop
+        return false; 
       }
     } else if ($(this).is("select")) {
       if ($(this).val() === null || $(this).val().trim() === "") {
         isValid = false;
-        return false; // break the loop
+        return false; 
       }
     } else if ($(this).val().trim() === "") {
       isValid = false;
-      return false; // break the loop
+      return false; 
     }
   });
+
+  // Check for step-5 and add the setTimeout logic
+  if (currentStep === 5) {
+    setTimeout(() => {
+      $(".loader-area").addClass("active");
+      $(".emergency-medication-supply").addClass("active");
+    }, 5000);
+  }
+
   return isValid;
 }
+
+
+
 
 function checkStepInputs() {
   const nextButton = $(`.step-${step} .validate-btn`);
